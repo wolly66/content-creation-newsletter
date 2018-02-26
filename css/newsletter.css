@@ -1,0 +1,50 @@
+/**
+ *
+ * CSS for newsletter admin
+ *
+ */
+
+ #short-news-listing{
+	 width: 100%;
+ }
+.newsletter-title-creation{
+	width: 400px;
+}
+ .single-news{
+	 width: 80%;
+ }
+
+ .news-title{
+	 margin-left: 10px;
+	 font-weight: bolder;
+ }
+
+ .news-content{
+	 clear: both;
+
+	 margin-left: 30px;
+
+	 font-style: italic;
+ }
+
+ .fixed .column-newsletter {
+    width: 100px;
+}
+
+#sortable { 
+	list-style-type: none; margin: 0; padding: 0; width: 60%;
+}
+#sortable li { 
+	list-style-type: none; 
+	margin: 0 3px 3px 3px;
+	padding: 0.4em; 
+	padding-left: 1.5em;
+    font-size: 1.4em;
+    height: 18px;
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+  }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+
