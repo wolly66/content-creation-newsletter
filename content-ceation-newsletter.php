@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Content Creation for Newsletter 
+ * @package Content Creation Newsletter 
  * @author Paolo Valenti
  * @version 1.0 First release
  */
@@ -83,6 +83,8 @@ class Wolly_Content_Creation_Newsletter {
 		add_action( 'init', array( $this, 'update_check' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'newsletter_admin_styles' ) );
+		
+		add_action( 'admin_enqueue_scripts', array( $this, 'jquery_effectts_core' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'jquery_validate' ) );
 
@@ -93,7 +95,9 @@ class Wolly_Content_Creation_Newsletter {
 		add_action( 'admin_enqueue_scripts', array( $this, 'jquery_select_newsletter_create' ) );
 		
 		add_action( 'admin_enqueue_scripts', array( $this, 'jquery_sort_sections' ) );
-
+		
+		
+		
 
 
 	}
@@ -229,7 +233,7 @@ class Wolly_Content_Creation_Newsletter {
 
 		wp_enqueue_script( 'jquery_sort_sections-js',
 		'' . WOLLY_CONFORNEW_PLUGIN_DIR .'js/sort.newsletter.sections.js',
-		array( 'jquery' ),
+		array( 'jquery', 'jquery-ui-core' ),
 		time(),
 		true );
 
@@ -237,7 +241,19 @@ class Wolly_Content_Creation_Newsletter {
 
 
 	}
+	
+	
+	public function jquery_effectts_core(){
+		
+		
+		wp_enqueue_script( 'jquery-ui-core' );
+		wp_enqueue_script( 'jquery-effects-core' );
+		
+		$protocol = is_ssl() ? 'https' : 'http';
+		$url = $protocol . '://ajax.googleapis.com/ajax/libs/jqueryui/1.12/themes/smoothness/jquery-ui.min.css';
+		wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
 
+	}
 
 
 

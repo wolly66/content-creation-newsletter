@@ -45,6 +45,16 @@
     background: #f6f6f6;
     font-weight: normal;
     color: #454545;
+    cursor: pointer;
   }
 #sortable li span { position: absolute; margin-left: -1.3em; }
 
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+
+.sortable-number { width: 25px;float: left;line-height: 1em;text-align: center;font-weight: bold; }
+
+.dashicons, .dashicons:before{
+	position: relative !important;
+	margin-left: 5px;
+	width: 25px;float: right;line-height: 1em;text-align: center;font-weight: bold;
+}

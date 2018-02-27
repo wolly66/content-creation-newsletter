@@ -459,6 +459,12 @@ class Wolly_Content_Creation_Newsletter_Cpt {
      <?php
 	}//close function
 	
+	/**
+	 * meta_box_newsletter_mngt_add function.
+	 * 
+	 * @access public
+	 * @return void
+	 */
 	public function meta_box_newsletter_mngt_add() {
 		 add_meta_box( 'newsletter_box', __( 'Choose Mailchimp List', 'content-creation-newsletter') , array( $this , 'newsletter_mngt_settings' ), 'newsletter_mngt', 'side', 'high' );
 		 }//close function
@@ -539,13 +545,18 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 					
 					$sorted_terms = wolly_order_sections( $terms );
 			?>
+			
+			<h3><?php _e( 'Drag and drop your sections to order them as you like. As you have finished, please, press the Update button. This order will be used in Newsletter creation.', 'content-creation-newsletter' ); ?></h3>
+				
 			<ul id="sortable">
 			<?php
 			foreach ( $sorted_terms as $key => $te ){ ?>
 				
-				<li id="<?php echo $te['term_id'] ?>" class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-				<?php echo $te['name']; ?> 
-				<input type="hidden" name="sort-order[]" value="<?php echo $te['term_id']; ?>" />
+				<li id="<?php echo $te['term_id'] ?>" class="ui-state-default">
+				 <div class="ui-state-default sortable-number"><?php echo $key; ?></div>
+
+				<?php echo $te['name']; ?>				<input type="hidden" name="sort-order[]" value="<?php echo $te['term_id']; ?>" />
+				<span class="dashicons dashicons-sort"></span>
 				</li>
 			<?php
 			}
@@ -557,16 +568,17 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 			
 			_e( 'Please, add at least one section', 'content-creation-newsletter' );
 		}
+			
+	}
 	
-	
-
-		
-		
-		
-		?>
-		
-<?php 	
-}
+	/**
+	 * shortnews_save function.
+	 * 
+	 * @access public
+	 * @param mixed $post_id
+	 * @param mixed $post
+	 * @return void
+	 */
 	public function shortnews_save( $post_id, $post ){
 
 
@@ -624,7 +636,15 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 		
 		
 	}
-
+	
+	/**
+	 * newsletter_save function.
+	 * 
+	 * @access public
+	 * @param mixed $post_id
+	 * @param mixed $post
+	 * @return void
+	 */
 	public function newsletter_save( $post_id, $post ){
 
     // Bail if we're doing an auto save
@@ -723,6 +743,14 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 		}
 	}
 	
+	/**
+	 * newsletter_mngt_save function.
+	 * 
+	 * @access public
+	 * @param mixed $post_id
+	 * @param mixed $post
+	 * @return void
+	 */
 	public function newsletter_mngt_save( $post_id, $post ){
 	
 	 // Bail if we're doing an auto save
