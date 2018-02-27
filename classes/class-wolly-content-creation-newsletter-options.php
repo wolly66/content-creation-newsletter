@@ -4,7 +4,7 @@
     exit; // Exit if accessed directly
 	}
 
-class content_creation_for_newsletter_Options
+class Wolly_Content_Newsletter_Creation_Options
 {
     /**
      * Holds the values to be used in the fields callbacks
@@ -286,4 +286,4 @@ class content_creation_for_newsletter_Options
 }
 
 if( is_admin() )
-    $content_creation_for_newsletter_options = new content_creation_for_newsletter_Options();
+    $Wolly_Content_Newsletter_Creation_Options = new Wolly_Content_Newsletter_Creation_Options();

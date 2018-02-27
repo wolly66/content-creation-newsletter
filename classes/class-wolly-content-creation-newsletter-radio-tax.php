@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-class WordPress_Radio_Taxonomy {
+class Wolly_Content_Newsletter_Creation_WordPress_Radio_Taxonomy {
 	private $taxonomy = '';
 	private $taxonomy_metabox_id = '';
 	private $post_type= '';
@@ -252,4 +252,4 @@ class WordPress_Radio_Taxonomy {
 
 
 }
-$wordpress_radio_taxonomy = new WordPress_Radio_Taxonomy();
+$Wolly_Content_Newsletter_Creation_WordPress_Radio_Taxonomy = new Wolly_Content_Newsletter_Creation_WordPress_Radio_Taxonomy();

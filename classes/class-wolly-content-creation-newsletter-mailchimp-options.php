@@ -12,7 +12,7 @@
 	 */
 	 
 	 
-	 Class Wolly_Newsletter_Mailchimp_Options{
+	 Class Wolly_Content_Newsletter_Creation_Mailchimp_Options{
 		 
 		 /**
      * Holds the values to be used in the fields callbacks
@@ -210,5 +210,5 @@
 	 }
 	 
 	 if ( is_admin(  )){
-	 $Wolly_Newsletter_Mailchimp_Options = new Wolly_Newsletter_Mailchimp_Options();
+	 $Wolly_Content_Newsletter_Creation_Mailchimp_Options = new Wolly_Content_Newsletter_Creation_Mailchimp_Options();
 	 }

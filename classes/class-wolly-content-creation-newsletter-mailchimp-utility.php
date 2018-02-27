@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  	}
 	 
 	 
-class Wolly_Newsletter_Mailchimp_Utility{
+class Wolly_Content_Newsletter_Creation_Mailchimp_Utility{
 	 
 	/**
 	 * mailchimp_options_name
@@ -313,4 +313,4 @@ private function curl_get_mailchimp_lists(){
 	 
 }
 
-$Wolly_Newsletter_Mailchimp_Utility = new Wolly_Newsletter_Mailchimp_Utility();
+$Wolly_Content_Newsletter_Creation_Mailchimp_Utility = new Wolly_Content_Newsletter_Creation_Mailchimp_Utility();

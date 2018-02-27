@@ -15,7 +15,7 @@
 	 /**
 	  * Wolly_Utility_User_Second_User_role class.
 	  */
-	class Wolly_Utility_User_Second_User_Role {
+	class Wolly_Content_Newsletter_Creation_Utility_User_Second_User_Role {
 		
 		/**
 		 * version
@@ -290,4 +290,4 @@
 	
 }// END class
 	 
-	 $Wolly_Utility_User_Second_User_Role = new Wolly_Utility_User_Second_User_Role();
+	 $Wolly_Content_Newsletter_Creation_Utility_User_Second_User_Role = new Wolly_Content_Newsletter_Creation_Utility_User_Second_User_Role();

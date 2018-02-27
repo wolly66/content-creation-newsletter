@@ -4,7 +4,7 @@
 	}
 
 
-class Wolly_Create_Newsletter{
+class Wolly_Content_Creation_Newletter_Create{
 
 	
     /**
@@ -143,8 +143,8 @@ class Wolly_Create_Newsletter{
     {
         add_submenu_page(
 	        'newsletter-setting-admin',
-			__( 'Newsletter Creator', 'content-creation-newsletter' ),
-			__( 'Newsletter Creator', 'content-creation-newsletter' ),
+			__( 'Create Newsletter', 'content-creation-newsletter' ),
+			__( 'Create Newsletter', 'content-creation-newsletter' ),
 			'manage_options',
 			'newsletter-creator',
 			array( $this, 'create_admin_page' )
@@ -159,9 +159,6 @@ class Wolly_Create_Newsletter{
      */
     public function create_admin_page()
     {
-
-
-        
 
 		$this->newsletters = wolly_get_newletters();		
 
@@ -555,4 +552,4 @@ class Wolly_Create_Newsletter{
 }
 
 if( is_admin() )
-    $wolly_create_newsletter = new Wolly_Create_Newsletter();
+    $Wolly_Content_Creation_Newletter_Create = new Wolly_Content_Creation_Newletter_Create();

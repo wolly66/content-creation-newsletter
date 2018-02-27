@@ -9,7 +9,7 @@
 	/**
 	 * Wolly_Newsletter_User_Meta class.
 	 */
-	class Wolly_Newsletter_User_Meta{
+	class Wolly_Content_Newsletter_Creation_User_Meta{
 
 		public function __construct(){
 			add_action( 'show_user_profile', array( $this, 'show_print_author_checkbox' ) );
@@ -88,4 +88,4 @@
 
 	}
 
-	$wolly_newsletter_user_meta = new Wolly_Newsletter_User_Meta();
+	$wolly_Content_Newsletter_Creation_user_meta = new Wolly_Content_Newsletter_Creation_User_Meta();
