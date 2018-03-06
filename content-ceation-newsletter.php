@@ -192,7 +192,7 @@ class Wolly_Content_Creation_Newsletter {
 		if ( 'shortnews' == $screen->post_type && is_admin() ){
 
 		wp_enqueue_script( 'select_newsletter-js',
-		'' . WOLLY_CONFORNEW_PLUGIN_DIR .'js/choose_newsletter_in_short_news.js',
+		'' . WOLLY_CONFORNEW_PLUGIN_DIR .'js/choose.newsletter.in.short.news.js',
 		array( 'jquery' ),
 		time(),
 		true );
@@ -212,7 +212,7 @@ class Wolly_Content_Creation_Newsletter {
 
 		$screen = get_current_screen();
 
-		if ( 'newsletter_page_newsletter-creator' == $screen->id && is_admin() ){
+		if ( 'mynewsletters_page_newsletter-creator' == $screen->id && is_admin() ){
 
 		wp_enqueue_script( 'jquery_select_newsletter_create-js',
 		'' . WOLLY_CONFORNEW_PLUGIN_DIR .'js/create.newsletter.js',
@@ -229,7 +229,7 @@ class Wolly_Content_Creation_Newsletter {
 
 		$screen = get_current_screen();
 
-		//if ( 'newsletter_page_newsletter-creator' == $screen->id && is_admin() ){
+		if ( 'newsletter_mngt' == $screen->id && is_admin() ){
 
 		wp_enqueue_script( 'jquery_sort_sections-js',
 		'' . WOLLY_CONFORNEW_PLUGIN_DIR .'js/sort.newsletter.sections.js',
@@ -237,7 +237,7 @@ class Wolly_Content_Creation_Newsletter {
 		time(),
 		true );
 
-		//}
+		}
 
 
 	}

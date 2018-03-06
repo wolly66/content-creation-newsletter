@@ -150,7 +150,7 @@ public function add_newsletter_to_query( $query ) {
 
 	if ( is_home() && $query->is_main_query() ){
 
-		$query->set( 'post_type', array( 'post', 'newsletter' ) );
+		$query->set( 'post_type', array( 'post', 'mynewsletters' ) );
 
 		}
 
@@ -165,7 +165,7 @@ public function add_newsletter_to_query( $query ) {
  */
 public function add_subscribe_newsletter_button_to_archive(){
 
-	if ( is_post_type_archive( 'newsletter' ) ){
+	if ( is_post_type_archive( 'mynewsletters' ) ){
 		
 		$all_lists = $this->get_mailchimp_lists();
 

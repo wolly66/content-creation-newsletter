@@ -51,7 +51,7 @@
 		 */
 		public function __construct(){
 		    
-		    $this->version 		= '100';
+		    $this->version 		= '104';
 		    $this->option_name 	= 'wolly_user_second_role';
 		    
 		    add_action( 'show_user_profile', 		array( $this, 'newsletter_extra_fields' ) );
@@ -94,7 +94,8 @@
 		
 		   //Update option
 		   $this->add_new_roles_and_caps();
-		   //update_option( $this->option_name , $this->version );
+		   
+		   update_option( $this->option_name , $this->version );
 		}
 		
 		
@@ -182,13 +183,9 @@
 			return;
 		}
 		
-		// ! TODO DEBUG DA RIMUOVERE
-		//echo '<pre>' . print_r( $_POST , 1 ) . '</pre>';
-		//wp_die();
-
 		$newsletter_role = esc_attr( $_POST[ 'newsletter_role' ] );
 
-		//get BackWPup roles
+		//get Newslweeter roles
 		$newsletter_roles = array();
 		foreach ( array_keys( $wp_roles->roles ) as $role ) {
 			if ( ! strstr( $role, 'newsletter_' ) ) {
@@ -204,7 +201,7 @@
 		//	$backwpup_role = '';
 		//}
 
-		//remove BackWPup role from user if it not the actual
+		//remove Newslwetter role from user if it not the actual
 		foreach ( $user->roles as $role ) {
 			if ( ! strstr( $role, 'newsletter_' ) ) {
 				continue;
@@ -248,8 +245,6 @@
 		
 		
 		
-		
-		
 		/**
 		 * Add caps to roles
 		 *
@@ -264,26 +259,185 @@
 		 * @since 1.0.0
 		 */ 
 		$role = get_role( 'administrator' );
+			$role->add_cap( 'create_newsletter' );
+			
+			$role->add_cap( 'edit_mynewsletter' );
+			$role->add_cap( 'read_mynewsletter' );
+			$role->add_cap( 'delete_mynewsletter' );
+			$role->add_cap( 'edit_mynewsletters' );
+			$role->add_cap( 'edit_others_mynewsletters' );
+			$role->add_cap( 'publish_mynewsletters' );
+			$role->add_cap( 'read_private_mynewsletters' );
+			$role->add_cap( 'delete_mynewsletters' );
+			$role->add_cap( 'delete_private_mynewsletters' );
+			$role->add_cap( 'delete_published_mynewsletters' );
+			$role->add_cap( 'delete_others_mynewsletters' );
+			$role->add_cap( 'edit_private_mynewsletters' );
+			$role->add_cap( 'edit_published_mynewsletters' );
+			$role->add_cap( 'edit_mynewsletters' );
+
+			
 			$role->add_cap( 'edit_shortnew' );
-			$role->add_cap( 'edit_shortnews' );
-			$role->add_cap( 'edit_other_shortnews' );
-			$role->add_cap( 'publish_shortnews' );
 			$role->add_cap( 'read_shortnew' );
-			$role->add_cap( 'read_private_shortnews' );
 			$role->add_cap( 'delete_shortnew' );
+			$role->add_cap( 'edit_shortnews' );
+			$role->add_cap( 'edit_others_shortnews' );
+			$role->add_cap( 'publish_shortnews' );
+			$role->add_cap( 'read_private_shortnews' );
+			$role->add_cap( 'delete_shortnews' );
+			$role->add_cap( 'delete_private_shortnews' );
+			$role->add_cap( 'delete_published_shortnews' );
+			$role->add_cap( 'delete_others_shortnews' );
+			$role->add_cap( 'edit_private_shortnews' );
+			$role->add_cap( 'edit_published_shortnews' );
+			$role->add_cap( 'edit_shortnews' );
+			
+			$role->add_cap( 'manage_sections' );
+			
+			
+			$role->remove_cap( 'edit_sections' );
+			$role->remove_cap( 'delete_sections' );
+			$role->remove_cap( 'assign_sections' );
+
 		/**
 		 * Role newsletter_admin
 		 *
 		 * @since 1.0.0
 		 */ 
 		$role = get_role( 'newsletter_admin' );
+			$role->add_cap( 'create_newsletter' );
+			
+			$role->add_cap( 'edit_mynewsletter' );
+			$role->add_cap( 'read_mynewsletter' );
+			$role->add_cap( 'delete_mynewsletter' );
+			$role->add_cap( 'edit_mynewsletters' );
+			$role->add_cap( 'edit_others_mynewsletters' );
+			$role->add_cap( 'publish_mynewsletters' );
+			$role->add_cap( 'read_private_mynewsletters' );
+			$role->add_cap( 'delete_mynewsletters' );
+			$role->add_cap( 'delete_private_mynewsletters' );
+			$role->add_cap( 'delete_published_mynewsletters' );
+			$role->add_cap( 'delete_others_mynewsletters' );
+			$role->add_cap( 'edit_private_mynewsletters' );
+			$role->add_cap( 'edit_published_mynewsletters' );
+			$role->add_cap( 'edit_mynewsletters' );
+			
+			
 			$role->add_cap( 'edit_shortnew' );
-			$role->add_cap( 'edit_shortnews' );
-			$role->add_cap( 'edit_other_shortnews' );
-			$role->add_cap( 'publish_shortnews' );
 			$role->add_cap( 'read_shortnew' );
-			$role->add_cap( 'read_private_shortnews' );
 			$role->add_cap( 'delete_shortnew' );
+			$role->add_cap( 'edit_shortnews' );
+			$role->add_cap( 'edit_others_shortnews' );
+			$role->add_cap( 'publish_shortnews' );
+			$role->add_cap( 'read_private_shortnews' );
+			$role->add_cap( 'delete_shortnews' );
+			$role->add_cap( 'delete_private_shortnews' );
+			$role->add_cap( 'delete_published_shortnews' );
+			$role->add_cap( 'delete_others_shortnews' );
+			$role->add_cap( 'edit_private_shortnews' );
+			$role->add_cap( 'edit_published_shortnews' );
+			$role->add_cap( 'edit_shortnews' );
+			
+			$role->add_cap( 'manage_sections' );
+			
+			
+		/**
+		 * Role newsletter_editor
+		 *
+		 * @since 1.0.0
+		 */ 
+		$role = get_role( 'newsletter_editor' );
+			
+			$role->add_cap( 'edit_mynewsletter' );
+			$role->add_cap( 'read_mynewsletter' );
+			$role->add_cap( 'delete_mynewsletter' );
+			$role->add_cap( 'edit_mynewsletters' );
+			$role->add_cap( 'edit_others_mynewsletters' );
+			$role->add_cap( 'publish_mynewsletters' );
+			$role->add_cap( 'read_private_mynewsletters' );
+			$role->add_cap( 'delete_mynewsletters' );
+			$role->add_cap( 'delete_private_mynewsletters' );
+			$role->add_cap( 'delete_published_mynewsletters' );
+			$role->add_cap( 'delete_others_mynewsletters' );
+			$role->add_cap( 'edit_private_mynewsletters' );
+			$role->add_cap( 'edit_published_mynewsletters' );
+			$role->add_cap( 'edit_mynewsletters' );
+			
+			
+			$role->add_cap( 'edit_shortnew' );
+			$role->add_cap( 'read_shortnew' );
+			$role->add_cap( 'delete_shortnew' );
+			$role->add_cap( 'edit_shortnews' );
+			$role->add_cap( 'edit_others_shortnews' );
+			$role->add_cap( 'publish_shortnews' );
+			$role->add_cap( 'read_private_shortnews' );
+			$role->add_cap( 'delete_shortnews' );
+			$role->add_cap( 'delete_private_shortnews' );
+			$role->add_cap( 'delete_published_shortnews' );
+			$role->add_cap( 'delete_others_shortnews' );
+			$role->add_cap( 'edit_private_shortnews' );
+			$role->add_cap( 'edit_published_shortnews' );
+			$role->add_cap( 'edit_shortnews' );
+			
+			$role->add_cap( 'manage_sections' );
+			
+			
+			
+		
+		/**
+		 * Role shortnews_editor
+		 *
+		 * @since 1.0.0
+		 */ 
+		$role = get_role( 'newsletter_shortnews_editor' );
+			
+			$role->add_cap( 'edit_shortnew' );
+			$role->add_cap( 'read_shortnew' );
+			$role->add_cap( 'delete_shortnew' );
+			$role->add_cap( 'edit_shortnews' );
+			$role->add_cap( 'edit_others_shortnews' );
+			$role->add_cap( 'publish_shortnews' );
+			$role->add_cap( 'read_private_shortnews' );
+			$role->add_cap( 'delete_shortnews' );
+			$role->add_cap( 'delete_private_shortnews' );
+			$role->add_cap( 'delete_published_shortnews' );
+			$role->add_cap( 'delete_others_shortnews' );
+			$role->add_cap( 'edit_private_shortnews' );
+			$role->add_cap( 'edit_published_shortnews' );
+			$role->add_cap( 'edit_shortnews' );
+			
+		
+		/**
+		 * Role shortnews_author
+		 *
+		 * @since 1.0.0
+		 */ 	
+		$role = get_role( 'newsletter_shortnews_author' );
+			
+			$role->add_cap( 'edit_shortnew' );
+			$role->add_cap( 'read_shortnew' );
+			$role->add_cap( 'delete_shortnew' );
+			$role->add_cap( 'edit_shortnews' );
+			$role->add_cap( 'publish_shortnews' );
+			$role->add_cap( 'edit_published_shortnews' );
+			$role->add_cap( 'edit_shortnews' );
+			
+		/**
+		 * Role shortnews_contributor
+		 *
+		 * @since 1.0.0
+		 */ 
+		$role = get_role( 'newsletter_shortnews_contributor' );
+			
+			$role->add_cap( 'edit_shortnew' );
+			$role->add_cap( 'read_shortnew' );
+			$role->add_cap( 'delete_shortnews' );
+			$role->add_cap( 'edit_shortnews' );
+			$role->add_cap( 'edit_shortnews' );
+
+
+			
+				
 		
 	}
 

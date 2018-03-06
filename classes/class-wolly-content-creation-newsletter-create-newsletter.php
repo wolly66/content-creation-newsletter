@@ -120,7 +120,7 @@ class Wolly_Content_Creation_Newletter_Create{
     public function __construct(){
 
 	    $this->options = get_option( 'content_creation_for_newsletter' );
-	    $this->newsletter_cpt = 'newsletter';
+	    $this->newsletter_cpt = 'mynewsletters';
 	    $this->short_news_cpt = 'shortnews';
 	    $this->newsletter_checkbox = '_newsletter_checkbox';
 	    $this->meta_inserted_in_newsletter = '_inserted_in_newsletter';
@@ -142,10 +142,10 @@ class Wolly_Content_Creation_Newletter_Create{
     public function add_plugin_page()
     {
         add_submenu_page(
-	        'newsletter-setting-admin',
+	        'edit.php?post_type=mynewsletters',
 			__( 'Create Newsletter', 'content-creation-newsletter' ),
 			__( 'Create Newsletter', 'content-creation-newsletter' ),
-			'manage_options',
+			'create_newsletter',
 			'newsletter-creator',
 			array( $this, 'create_admin_page' )
 			);
@@ -167,6 +167,8 @@ class Wolly_Content_Creation_Newletter_Create{
             <h2><?php _e( 'Newsletter Creator', 'content-creation-newsletter' ) ?></h2>
 
 	        <?php $screen = get_current_screen();
+		        
+		     
 		       
 
 				if ( is_array( $this->newsletters ) && ! empty( $this->newsletters ) ){
@@ -528,7 +530,7 @@ class Wolly_Content_Creation_Newletter_Create{
         'post_content' => $newsletter,
         'post_title' => $newsletter_title,
         'post_status' => 'draft',
-        'post_type' => 'newsletter',
+        'post_type' => 'mynewsletters',
  		);
 
 		$newsletter_id = wp_insert_post( $args );

@@ -58,6 +58,7 @@
     {
 	    // Set class property
         $this->options = get_option( 'wolly_mailchimp_options' );
+    
         
         ?>
         <div class="wrap">
@@ -185,7 +186,7 @@
      */
     public function print_mailchimp_lists_sections_info()
     {
-	    $Wolly_Newsletter_Mailchimp_Utility = new Wolly_Newsletter_Mailchimp_Utility();
+	    $Wolly_Newsletter_Mailchimp_Utility = new Wolly_Content_Newsletter_Creation_Mailchimp_Utility();
 	    $all_lists = $Wolly_Newsletter_Mailchimp_Utility->get_mailchimp_lists();
 	    	    
         _e( 'All Mailchimp Lists', 'content-creation-newsletter' );

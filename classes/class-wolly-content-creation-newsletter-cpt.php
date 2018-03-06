@@ -33,7 +33,8 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 		$this->options = get_option( 'content_creation_for_newsletter' );
 		
 
-		add_action( 'init', array( $this, 'newsletter_custom_post_type' ) );
+		
+		add_action( 'init', array( $this, 'mynewsletters_custom_post_type' ) );
 		add_action( 'init', array( $this, 'short_news_custom_post_type' ) );
 		
 		if ( 'int' == $this->options['management'] ){
@@ -56,8 +57,9 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 
 	}
 
+		
 	/**
-	 * newsletter_custom_post_type function.
+	 * mynewsletters_custom_post_type function.
 	 *
 	 *  @since version 1.0
 	 *
@@ -66,7 +68,7 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 	 * @access public
 	 * @return void
 	 */
-	public function newsletter_custom_post_type() {
+	public function mynewsletters_custom_post_type() {
 
 		$labels = array(
 			'name'                  => _x( 'Newsletters', 'Post Type General Name', 'content-creation-newsletter' ),
@@ -113,11 +115,14 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 			'has_archive'           => true,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
-			'capability_type'       => 'page',
+			'capability_type' => array( 'mynewsletter', 'mynewsletters' ),
+			'map_meta_cap' => true,	
 		);
-		register_post_type( 'newsletter', $args );
+		register_post_type( 'mynewsletters', $args );
 
 	}
+
+
 
 	/**
 	 * short_news_custom_post_type function.
@@ -173,18 +178,19 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => false,
 			'can_export'            => true,
-			'has_archive'           => true,
+			'has_archive'           => false,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => false,
-			'capabilities' => array(
-				'edit_post' 		 => 'edit_shortnew',
-				'edit_posts' 		 => 'edit_shortnews',
-				'edit_others_posts'  => 'edit_other_shortnews',
-				'publish_posts'		 => 'publish_shortnews',
-				'read_post' 		 => 'read_shortnew',
-				'read_private_posts' => 'read_private_shortnews',
-				'delete_post' 		 => 'delete_shortnew'
-				),
+			'capability_type' => array( 'shortnew', 'shortnews' ),
+			//'capabilities' => array(
+			//  'edit_post' 		 => 'edit_shortnew',
+			//  'edit_posts' 		 => 'edit_shortnews',
+			//  'edit_others_posts'  => 'edit_other_shortnews',
+			//  'publish_posts'		 => 'publish_shortnews',
+			//  'read_post' 		 => 'read_shortnew',
+			//  'read_private_posts' => 'read_private_shortnews',
+			//  'delete_post' 		 => 'delete_shortnew'
+			//  ),
 			'map_meta_cap' => true,		
 		);
 		register_post_type( 'shortnews', $args );
@@ -380,11 +386,12 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 
 	// We'll use this nonce field later on when saving.
 	wp_nonce_field( 'shortnews_nonce', 'shortnews_nonce' );
+	
 	?>
 
 	<p>
 
-
+	
 
 	    <div  class="link">
 
@@ -407,9 +414,16 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 	 * @return void
 	 */
 	 public function meta_box_newsletter_add() {
-		 add_meta_box( 'newsletter_box', __( 'Choose Newsletter', 'content-creation-newsletter') , array( $this , 'newsletter_settings' ), 'newsletter', 'side', 'high' );
+		 add_meta_box( 'newsletter_box', __( 'Choose Newsletter', 'content-creation-newsletter') , array( $this , 'newsletter_settings' ), 'mynewsletters', 'side', 'high' );
 		 }//close function
-
+		 
+	
+	/**
+	 * newsletter_settings function.
+	 * 
+	 * @access public
+	 * @return void
+	 */
 	public function newsletter_settings() {
 
 	// $post is already set, and contains an object: the WordPress post
@@ -469,6 +483,13 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 		 add_meta_box( 'newsletter_box', __( 'Choose Mailchimp List', 'content-creation-newsletter') , array( $this , 'newsletter_mngt_settings' ), 'newsletter_mngt', 'side', 'high' );
 		 }//close function
 
+	
+	/**
+	 * newsletter_mngt_settings function.
+	 * 
+	 * @access public
+	 * @return void
+	 */
 	public function newsletter_mngt_settings() {
 
 	// $post is already set, and contains an object: the WordPress post
@@ -476,7 +497,7 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 
 	$choosen_list = get_post_meta( $post->ID, 'choosen_list', true );
 
-	$Wolly_Newsletter_Mailchimp_Utility = new Wolly_Newsletter_Mailchimp_Utility();
+	$Wolly_Newsletter_Mailchimp_Utility = new Wolly_Content_Newsletter_Creation_Mailchimp_Utility();
 	$all_lists = $Wolly_Newsletter_Mailchimp_Utility->get_mailchimp_lists();
 	// We'll use this nonce field later on when saving.
 	wp_nonce_field( 'newsletter_nonce', 'newsletter_nonce' );
@@ -515,11 +536,24 @@ class Wolly_Content_Creation_Newsletter_Cpt {
      </p>
      <?php
 	}//close function
-
+	
+	
+	/**
+	 * meta_box_newsletter_mngt_sort_sections_add function.
+	 * 
+	 * @access public
+	 * @return void
+	 */
 	public function meta_box_newsletter_mngt_sort_sections_add() {
 		 add_meta_box( 'sections_box', __( 'Order Sections', 'content-creation-newsletter' ) , array( $this , 'newsletter_mngt_sort_sections_settings' ), 'newsletter_mngt', 'normal', 'high' );
 		 }//close function
 		 
+	/**
+	 * newsletter_mngt_sort_sections_settings function.
+	 * 
+	 * @access public
+	 * @return void
+	 */
 	public function newsletter_mngt_sort_sections_settings(){
 		
 		global $post;
@@ -544,6 +578,7 @@ class Wolly_Content_Creation_Newsletter_Cpt {
 					wp_nonce_field( 'newsletter_nonce', 'newsletter_nonce' );
 					
 					$sorted_terms = wolly_order_sections( $terms );
+					
 			?>
 			
 			<h3><?php _e( 'Drag and drop your sections to order them as you like. As you have finished, please, press the Update button. This order will be used in Newsletter creation.', 'content-creation-newsletter' ); ?></h3>
@@ -598,7 +633,7 @@ class Wolly_Content_Creation_Newsletter_Cpt {
     	return;
 
     // if our current user can't edit this post, bail
-    if( !current_user_can( 'edit_post' ) )
+    if( !current_user_can( 'edit_shortnew' ) )
     	return;
 
 
@@ -651,7 +686,7 @@ class Wolly_Content_Creation_Newsletter_Cpt {
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
     	return;
 
-    $slug = 'newsletter';
+    $slug = 'mynewsletters';
 
     // If this isn't a 'book' post, don't update it.
     if ( $slug != $post->post_type ) {

@@ -45,6 +45,8 @@ class Wolly_Content_Creation_Newsletter_Tax {
 		
 		add_action( 'init', array( $this, 'sections_tax' ) );
 		
+		add_action('init', array( $this, 'assign_sections_terms' ) );
+		
 		
 		add_action( 'init', array( $this, 'register_sections_meta' ) );
 		
@@ -101,15 +103,27 @@ class Wolly_Content_Creation_Newsletter_Tax {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => false,
+		'capabilites'       => array(
+        			'manage_terms'  => 'manage_sections',
+        			'edit_terms'    => 'manage_sections',
+        			'delete_terms'  => 'manage_sections',
+        			'assign_terms'  => 'edit_shortnews'
+					)
 	);
 	register_taxonomy( 'sections', array( 'shortnews' ), $args );
 
 }
 
+	public function assign_sections_terms(){
+		global $wp_taxonomies;
 
+		$wp_taxonomies['sections']->cap->manage_terms = 'manage_sections';
+		$wp_taxonomies['sections']->cap->edit_terms = 'manage_sections';
+		$wp_taxonomies['sections']->cap->delete_terms = 'manage_sections';
+		$wp_taxonomies['sections']->cap->assign_terms = 'edit_shortnews';
+	}
 
-	
-	/**
+		/**
 	 * register_sections_meta function.
 	 * 
 	 * @access public
@@ -254,7 +268,7 @@ class Wolly_Content_Creation_Newsletter_Tax {
 	 */
 	public function edit_sections_columns( $columns ) {
 
-    	$columns['newsletter'] = __( 'NewsL.', 'content-creation-newsletter' );
+    	$columns['newsletter'] = __( 'NewsL', 'content-creation-newsletter' );
 
 		return $columns;
 	}

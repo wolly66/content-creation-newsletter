@@ -105,21 +105,7 @@ class Wolly_Content_Newsletter_Creation_Options
             'woocommerce'// Section
         );
 
-        add_settings_section(
-            'sections', // ID
-            __( 'Create Newsletters Sections', 'content-creation-newsletter' ), // Title
-            array( $this, 'print_sections_info' ), // Callback
-            'newsletter-setting-admin' // Page
-        );
-
-        add_settings_field(
-            'sections-management', // ID
-            __( 'Sections Management', 'content-creation-newsletter' ),  // Title
-            array( $this, 'sections_management_callback' ),// Callback
-            'newsletter-setting-admin',// Page
-            'sections'// Section
-        );
-        
+                
         add_settings_section(
             'mailchimp', // ID
             __( 'Mailchimp', 'content-creation-newsletter' ), // Title
@@ -227,48 +213,17 @@ class Wolly_Content_Newsletter_Creation_Options
     {
 	   
 		    ?>
-
-		    <select name="content_creation_for_newsletter[management]">
+			<input type="hidden" name="content_creation_for_newsletter[management]" value="int" /><?php _e( 'Internal management', 'content-creation-newsletter' ) ?> 
+		   <!-- <select name="content_creation_for_newsletter[management]">
 			    <option value='-1' <?php selected( $this->options['management'], -1 ); ?>><?php _e( 'Please, choose newsletter management', 'content-creation-newsletter' ) ?></option>
 			    <option value='int' <?php selected( $this->options['management'], 'int' ); ?>><?php _e( 'Internal management', 'content-creation-newsletter' ) ?></option>
 			    <option value='woo' <?php selected( $this->options['management'], 'woo' ); ?>><?php _e( 'WooCommerce', 'content-creation-newsletter' ) ?></option>
-		    </select>
+		    </select>-->
 		    <?php
+			 
+			}
 
-		        }
-
-    /**
-     * Get the settings option array and print one of its values
-     */
-    public function sections_management_callback()
-    {
-	    
-
-		$this->newsletters = wolly_get_newletters();
-		
-	    if ( is_array( $this->newsletters ) && ! empty( $this->newsletters ) ){
-
-		    foreach ( $this->newsletters as $nl ){
-
-			    //$nl->ID
-			?>
-
-				<h4><?php echo $nl->post_title ?></h4>
-
-
-			<?php
-				}
-
-
-
-
-		    } else {
-
-			 _e( 'Please, create a newsletter', 'content-creation-newsletter' );
-
-    	}
-    }
-    
+      
     
      public function sections_mailchimp_use_callback(){
 	     

@@ -43,7 +43,7 @@ class Wolly_Content_Newsletter_Creation_WordPress_Radio_Taxonomy {
 
 		$this->name = 'tax_input[' . $this->taxonomy . ']';
 
-		$this->get_newsletter_associated ();
+		$this->get_newsletter_associated();
 
 		//Remove old taxonomy meta box
 		add_action( 'admin_menu', array( $this,'remove_meta_box'));
@@ -151,7 +151,7 @@ class Wolly_Content_Newsletter_Creation_WordPress_Radio_Taxonomy {
 		if( !$tax || empty( $term ) )
 			exit();
 
-		if ( !current_user_can( $tax->cap->edit_terms ) )
+		if ( !current_user_can( 'assign_sections' ) )
 			die('-1');
 
 		$tag = wp_insert_term($term, $this->taxonomy);
