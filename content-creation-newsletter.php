@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 function wolly_content_for_newsletter_management_init() {
-	  load_plugin_textdomain( 'content-creation-newsletter', false, dirname( plugin_basename( __FILE__ ) ) );
+	  load_plugin_textdomain( 'content-creation-newsletter', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 add_action('plugins_loaded', 'wolly_content_for_newsletter_management_init');
 

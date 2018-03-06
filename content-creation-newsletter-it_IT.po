@@ -1,0 +1,581 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wolly Newsletter\n"
+"POT-Creation-Date: 2018-03-06 17:30+0100\n"
+"PO-Revision-Date: 2018-03-06 17:43+0100\n"
+"Last-Translator: wolly (paolo valenti) <wolly66@gmail.com>\n"
+"Language-Team: wolly <wolly66@gmail.com>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: classes\n"
+"X-Poedit-SearchPath-1: content-ceation-newsletter.php\n"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:74
+msgid "Newsletters"
+msgstr "Newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:75
+#: classes/class-wolly-content-creation-newsletter-cpt.php:76
+#: classes/class-wolly-content-creation-newsletter-cpt.php:77
+#: classes/class-wolly-content-creation-newsletter-cpt.php:101
+#: classes/class-wolly-content-creation-newsletter-cpt.php:102
+#: classes/class-wolly-content-creation-newsletter-options.php:34
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:78
+#: classes/class-wolly-content-creation-newsletter-cpt.php:145
+#: classes/class-wolly-content-creation-newsletter-cpt.php:218
+msgid "Item Archives"
+msgstr "Archvi elemento"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:79
+#: classes/class-wolly-content-creation-newsletter-cpt.php:146
+#: classes/class-wolly-content-creation-newsletter-cpt.php:220
+#: classes/class-wolly-content-creation-newsletter-tax.php:82
+msgid "Parent Item:"
+msgstr "Elemento genitore:"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:80
+#: classes/class-wolly-content-creation-newsletter-cpt.php:147
+#: classes/class-wolly-content-creation-newsletter-cpt.php:221
+#: classes/class-wolly-content-creation-newsletter-tax.php:80
+msgid "All Items"
+msgstr "Tutti gli elementi"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:81
+#: classes/class-wolly-content-creation-newsletter-cpt.php:148
+#: classes/class-wolly-content-creation-newsletter-cpt.php:222
+#: classes/class-wolly-content-creation-newsletter-tax.php:84
+msgid "Add New Item"
+msgstr "Aggiungi nuova elemento"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:82
+#: classes/class-wolly-content-creation-newsletter-cpt.php:149
+#: classes/class-wolly-content-creation-newsletter-cpt.php:223
+msgid "Add New"
+msgstr "Aggiungi nuovo"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:83
+#: classes/class-wolly-content-creation-newsletter-cpt.php:150
+#: classes/class-wolly-content-creation-newsletter-cpt.php:224
+msgid "New Item"
+msgstr "Nuovo elemento"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:84
+#: classes/class-wolly-content-creation-newsletter-cpt.php:151
+#: classes/class-wolly-content-creation-newsletter-cpt.php:225
+#: classes/class-wolly-content-creation-newsletter-tax.php:85
+msgid "Edit Item"
+msgstr "Modifica elemento"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:85
+#: classes/class-wolly-content-creation-newsletter-cpt.php:152
+#: classes/class-wolly-content-creation-newsletter-cpt.php:226
+#: classes/class-wolly-content-creation-newsletter-tax.php:86
+msgid "Update Item"
+msgstr "Aggiorna elemento"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:86
+#: classes/class-wolly-content-creation-newsletter-cpt.php:153
+#: classes/class-wolly-content-creation-newsletter-cpt.php:227
+#: classes/class-wolly-content-creation-newsletter-tax.php:87
+msgid "View Item"
+msgstr "Visualizza elemento"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:87
+#: classes/class-wolly-content-creation-newsletter-cpt.php:154
+#: classes/class-wolly-content-creation-newsletter-cpt.php:229
+msgid "Search Item"
+msgstr "Cerca elemento"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:88
+#: classes/class-wolly-content-creation-newsletter-cpt.php:155
+#: classes/class-wolly-content-creation-newsletter-cpt.php:230
+msgid "Not found"
+msgstr "Non trovato"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:89
+#: classes/class-wolly-content-creation-newsletter-cpt.php:156
+#: classes/class-wolly-content-creation-newsletter-cpt.php:231
+msgid "Not found in Trash"
+msgstr "Non trovato nel cestino"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:90
+#: classes/class-wolly-content-creation-newsletter-cpt.php:157
+#: classes/class-wolly-content-creation-newsletter-cpt.php:232
+msgid "Featured Image"
+msgstr "Immagine in evidenza"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:91
+#: classes/class-wolly-content-creation-newsletter-cpt.php:158
+#: classes/class-wolly-content-creation-newsletter-cpt.php:233
+msgid "Set featured image"
+msgstr "Imposta l’immagine in evidenza"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:92
+#: classes/class-wolly-content-creation-newsletter-cpt.php:159
+#: classes/class-wolly-content-creation-newsletter-cpt.php:234
+msgid "Remove featured image"
+msgstr "Rimuovi l’immagine in evidenza"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:93
+#: classes/class-wolly-content-creation-newsletter-cpt.php:160
+#: classes/class-wolly-content-creation-newsletter-cpt.php:235
+msgid "Use as featured image"
+msgstr "Utilizza come immagine in evidenza"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:94
+#: classes/class-wolly-content-creation-newsletter-cpt.php:161
+#: classes/class-wolly-content-creation-newsletter-cpt.php:236
+msgid "Insert into item"
+msgstr ""
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:95
+#: classes/class-wolly-content-creation-newsletter-cpt.php:162
+#: classes/class-wolly-content-creation-newsletter-cpt.php:237
+msgid "Uploaded to this item"
+msgstr ""
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:96
+#: classes/class-wolly-content-creation-newsletter-cpt.php:163
+#: classes/class-wolly-content-creation-newsletter-cpt.php:238
+#: classes/class-wolly-content-creation-newsletter-tax.php:95
+msgid "Items list"
+msgstr "Lista elementi"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:97
+#: classes/class-wolly-content-creation-newsletter-cpt.php:164
+#: classes/class-wolly-content-creation-newsletter-cpt.php:239
+#: classes/class-wolly-content-creation-newsletter-tax.php:96
+msgid "Items list navigation"
+msgstr ""
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:98
+#: classes/class-wolly-content-creation-newsletter-cpt.php:165
+#: classes/class-wolly-content-creation-newsletter-cpt.php:240
+msgid "Filter items list"
+msgstr ""
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:141
+#: classes/class-wolly-content-creation-newsletter-cpt.php:142
+#: classes/class-wolly-content-creation-newsletter-cpt.php:143
+#: classes/class-wolly-content-creation-newsletter-cpt.php:144
+#: classes/class-wolly-content-creation-newsletter-cpt.php:168
+#: classes/class-wolly-content-creation-newsletter-cpt.php:169
+msgid "Short news"
+msgstr "Short news"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:214
+msgid "Newsletters management"
+msgstr "Gestione delle newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:215
+#, fuzzy
+#| msgid "Newsletter Management"
+msgid "Post TypeNewsletter management"
+msgstr "Gestione delle newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:216
+#: classes/class-wolly-content-creation-newsletter-cpt.php:217
+msgid "Newsletter MNGT"
+msgstr "Newsletter MNGT"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:219
+msgid "Item Attributes"
+msgstr ""
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:228
+msgid "View Items"
+msgstr "Visualizza elementi"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:243
+#: classes/class-wolly-content-creation-newsletter-cpt.php:244
+#, fuzzy
+#| msgid "Newsletter Management"
+msgid "Newsletter management"
+msgstr "Gestione delle newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:274
+#: classes/class-wolly-content-creation-newsletter-cpt.php:417
+#: classes/class-wolly-content-creation-newsletter-tax.php:159
+#: classes/class-wolly-content-creation-newsletter-tax.php:202
+msgid "Choose Newsletter"
+msgstr "Scegli la newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:310
+#: classes/class-wolly-content-creation-newsletter-cpt.php:454
+msgid "Please, choose newsletter"
+msgstr "Scegli la newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:367
+msgid "News link"
+msgstr "Link della notizia"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:398
+msgid "URL (include http:// or https://)"
+msgstr "URL (includi http:// o https://)"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:400
+msgid "Language"
+msgstr "Lingua"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:483
+msgid "Choose Mailchimp List"
+msgstr "Scegli la lista Mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:518
+msgid "Please, choose a list"
+msgstr "Scegli una lista"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:548
+msgid "Order Sections"
+msgstr "Ordinamento delle sezioni"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:584
+msgid ""
+"Drag and drop your sections to order them as you like. As you have finished, "
+"please, press the Update button. This order will be used in Newsletter "
+"creation."
+msgstr ""
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:604
+msgid "Please, add at least one section"
+msgstr "Aggiungi almeno una sezione"
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:738
+msgid "You can read this newsletter at this "
+msgstr "Puoi leggere la newsletter a questo "
+
+#: classes/class-wolly-content-creation-newsletter-cpt.php:760
+msgid "You can discuss this newsletter on our forum at this "
+msgstr "Puoi discutere la newsletter sul forum a questo "
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:146
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:147
+msgid "Create Newsletter"
+msgstr "Crea la newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:167
+msgid "Newsletter Creator"
+msgstr "Crea newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:178
+#: classes/class-wolly-content-creation-newsletter-tax.php:166
+#: classes/class-wolly-content-creation-newsletter-tax.php:207
+msgid "Choose newsletter"
+msgstr "Scegli la newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:196
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:415
+#: classes/class-wolly-content-creation-newsletter-radio-tax.php:115
+#: classes/class-wolly-content-creation-newsletter-radio-tax.php:180
+msgid "Please, choose a Newsletter"
+msgstr "Scegli la newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:365
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:509
+msgid "by "
+msgstr "da "
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:379
+msgid ""
+"There is no content, it should be better to write a content before publish "
+"the newsletter"
+msgstr ""
+"Non c’è contenuto, sarebbe meglio scrivere del contenuto prima di pubblicare "
+"la newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:394
+msgid "No short news available"
+msgstr "Non ci sono short new"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:424
+msgid "Newsletter title"
+msgstr "Titolo della newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:426
+msgid "Do not print sections name"
+msgstr "Non pubblicare i nomi delle sezioni"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:427
+msgid "Choose short news to add to the newsletter"
+msgstr "Scegli le short new da aggiungere alla newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-create-newsletter.php:525
+msgid "Title not defined"
+msgstr "Titolo non definito"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:46
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:47
+msgid "Mailchimp options"
+msgstr "Opzioni mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:65
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:159
+msgid "Mailchimp Settings"
+msgstr "Impostazioni mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:93
+#: classes/class-wolly-content-creation-newsletter-options.php:111
+msgid "Mailchimp"
+msgstr "Mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:101
+msgid "Mailchimp Api"
+msgstr "API mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:109
+msgid "Mailchimp URL"
+msgstr "URL mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:117
+msgid "Mailchimp Lists"
+msgstr "Liste mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:124
+msgid "Add a subscribe form on single page"
+msgstr "Aggiungi un form di iscrizione sulla pagina single"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:192
+msgid "All Mailchimp Lists"
+msgstr "Tutte le liste mailchimp"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:198
+#, php-format
+msgid "List name: %s List ID: %s"
+msgstr "Nome della lista: %s ID della lista: %s"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-options.php:204
+msgid "You have no list"
+msgstr "Non hai liste"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-utility.php:130
+msgid "<h4>I have a newsletter about WordPress</h4>"
+msgstr "<h4>Ho una newsletter che parla di WordPress</h4>"
+
+#: classes/class-wolly-content-creation-newsletter-mailchimp-utility.php:131
+msgid "<p><a href=\""
+msgstr ""
+
+#: classes/class-wolly-content-creation-newsletter-options.php:52
+msgid "Newsletter Settings"
+msgstr "Impostazioni newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:80
+msgid "Do you want Newsletters added to the main query?"
+msgstr "Vuoi che le newsletter siano aggiunte alla query principale?"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:87
+msgid "Add to main query?"
+msgstr "Aggiungi alla query principale?"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:95
+msgid "Choose Newsletters Management"
+msgstr "Scegli la gestione delle newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:102
+msgid "Newsletter Management"
+msgstr "Gestione delle newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:118
+msgid "Use Mailchimp?"
+msgstr "Usi Mailchimp?"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:174
+msgid "Main query settings"
+msgstr "Impostazioni query principale"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:182
+msgid "Choose newsletter management for this website"
+msgstr "Scegli la gestione della newsletter per questo sito"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:190
+msgid "Create newsletter sections"
+msgstr "Crea le sezioni della newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:200
+#: classes/class-wolly-content-creation-newsletter-options.php:231
+msgid "Yes"
+msgstr "Si"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:203
+#: classes/class-wolly-content-creation-newsletter-options.php:234
+msgid "No"
+msgstr "No"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:216
+#: classes/class-wolly-content-creation-newsletter-options.php:219
+msgid "Internal management"
+msgstr "Gestione interna"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:218
+msgid "Please, choose newsletter management"
+msgstr "Scegli la gestione newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-options.php:220
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:77
+#: classes/class-wolly-content-creation-newsletter-tax.php:79
+msgid "Sections"
+msgstr "Sezioni"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:78
+msgid "Section"
+msgstr "Sezione"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:81
+msgid "Parent Item"
+msgstr "Elemento genitore"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:83
+msgid "New Item Name"
+msgstr "Nuovo nome elemento"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:88
+msgid "Separate items with commas"
+msgstr "Separa gli elementi con una virgola"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:89
+msgid "Add or remove items"
+msgstr "Aggiungi o rimuovi elementi"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:90
+msgid "Choose from the most used"
+msgstr "Scegli tra i più utilizzati"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:91
+msgid "Popular Items"
+msgstr "Elementi popolari"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:92
+msgid "Search Items"
+msgstr "Cerca elementi"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:93
+msgid "Not Found"
+msgstr "Non Trovato"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:94
+msgid "No items"
+msgstr "Nessun elemento"
+
+#: classes/class-wolly-content-creation-newsletter-tax.php:271
+msgid "NewsL"
+msgstr "NewsL"
+
+#: classes/class-wolly-content-creation-newsletter-user-meta.php:37
+msgid "Newsletter settings"
+msgstr "Impostazioni newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-user-meta.php:42
+msgid "Print author name "
+msgstr "Stampa il nome dell’autore "
+
+#: classes/class-wolly-content-creation-newsletter-user-meta.php:45
+msgid "If checked, author name will be printed "
+msgstr "Se selezionato, il nome dell’autore sarà stampato "
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:133
+msgid "Choose a role for newsletter"
+msgstr "Scegli un ruolo per newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:138
+msgid "Newsletter Role"
+msgstr "Ruolo newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:141
+msgid "-- No additional Role for Newletter --"
+msgstr "— Nessun ruolo addizionale per Newsletter —"
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:240
+msgid "Newsletter admin"
+msgstr "Amministratore newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:241
+msgid "Newsletter editor"
+msgstr "Editore newsletter"
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:242
+msgid "Shortnews editor"
+msgstr "Editore shortnews"
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:243
+msgid "Shortnews author"
+msgstr "Autore shortnews"
+
+#: classes/class-wolly-content-creation-newsletter-utility-user-second-role.php:244
+msgid "Shortnews contributor"
+msgstr "Contributore shortnews"
+
+#~ msgid "Hello world!!!"
+#~ msgstr "Ciao mondo!!!!!!"
+
+#~ msgid "Order %s received"
+#~ msgstr "Ordine %s ricevuto"
+
+#~ msgid "Newletter Settings"
+#~ msgstr "Impostazioni newsletter"
+
+#~ msgid "Choose if this is the master or slave website"
+#~ msgstr "Secegli se questo sito è quello principale o secondario"
+
+#~ msgid "Master/Slave"
+#~ msgstr "Principale/secondario"
+
+#~ msgid "Sections Management"
+#~ msgstr "Gestione delle sezioni"
+
+#~ msgid "Master"
+#~ msgstr "Principale"
+
+#~ msgid "Slave"
+#~ msgstr "Secondario"
+
+#~ msgid "If you choose SLAVE, please, enter the MASTER website URL"
+#~ msgstr "Se hai scelto secondario, inserisci l’URL del sito principale"
+
+#~ msgid "Please, choose if this website is master or slave"
+#~ msgstr "Scegli se il sito è principale o secondario"
+
+#~ msgid "NewsL ID"
+#~ msgstr "NewsL ID"
+
+#~ msgid "Check if this product is a Newsletter!"
+#~ msgstr "Controllo se questo prodotto è una newsletter!"
+
+#~ msgid "Newsletter URL"
+#~ msgstr "URL Newsletter"
+
+#~ msgid "Enter the URL of the newsletter website including /."
+#~ msgstr "Inserisci l’URL del sito della newsletter incluso /."
+
+#~ msgid "Enter the Mailchimp List ID"
+#~ msgstr "Inserisci l’ID della lista su mailchimp"
+
+#~ msgid "Has forum?"
+#~ msgstr "Ha un forum?"
+
+#~ msgid "Check if this newsletter has a forum!"
+#~ msgstr "Seleziona se questa newsletter ha un forum!"
+
+#~ msgid "Forum ID"
+#~ msgstr "ID del forum"
+
+#~ msgid "Enter the Forum ID"
+#~ msgstr "Inserisci l’ID del forum"
+
+#~ msgid "Group forum name"
+#~ msgstr "Nome del gruppo forum"
+
+#~ msgid "Enter the forum group name"
+#~ msgstr "Inserisci il nome del gruppo forum"
