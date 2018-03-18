@@ -336,7 +336,7 @@ class Wolly_Content_Creation_Newletter_Create{
 					$newletter_url 		= get_post_meta( $sn->ID, 'newsletter_url', true );
 					$newsletter_lang 	= get_post_meta( $sn->ID, 'newsletter_lang', true );
 					
-					$url 		= ( ! empty( $newletter_url ) )   ? '<strong>URL:</strong> ' . $newletter_url      : '';
+					$url 		= ( ! empty( $newletter_url ) )   ? '<strong>URL:</strong> <a href="' . $newletter_url . '" >' . $newletter_url . '</a>'    : '';
 					$language 	= ( ! empty( $newsletter_lang ) ) ? '<strong>Lingua:</strong> ' . $newsletter_lang : '';
 					
 				    $print_author = get_user_meta( $sn->post_author, 'print_author_checkbox', true );
